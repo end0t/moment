@@ -1,0 +1,61 @@
+/*-------------------------------------------------
+File        : contents.css
+Author      : COMMIN (GH.SEO)
+Create date : 2022-09-28
+-------------------------------------------------*/
+#wrap {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/bg.jpeg) no-repeat center center/cover;
+  padding: 2rem;
+}
+
+.dock {
+  display: flex;
+}
+.dock li {
+  margin: 1rem;
+  text-align: center;
+}
+.dock li > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  background: #b8e1fc; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#b8e1fc", endColorstr="#bdf3fd",GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+}
+.dock li > span > span {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70%;
+  width: 100%;
+  height: 100%;
+}
+.dock li strong {
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.dock li:nth-of-type(1) span span {
+  background-image: url(../img/memo.png);
+}
+.dock li:nth-of-type(2) span span {
+  background-image: url(../img/clock.png);
+}
+.dock li:nth-of-type(3) span span {
+  background-image: url(../img/draw.png);
+}

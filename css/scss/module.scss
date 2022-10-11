@@ -1,0 +1,151 @@
+// -------------------------------------------------
+// File        : module.css
+// Author      : COMMIN (GH.SEO)
+// Create date : 2022-09-28
+// Version     : 1.0
+// -------------------------------------------------
+
+// 백그라운드
+$bg : #ffffff;
+
+// 폰트 설정
+$ff1 : "Pretendard";
+$ff2 : "Montserrat";
+$ff3 : "";
+$ff4 : "Font Awesome 6 Pro";
+
+// 기본 폰트 컬러
+$fc : #333333;
+$fc-sub : #606060;
+$fc-icon : #000000;
+$fc-cont : #656565;
+$fc-basic : #989898;
+$fc-title : #333333;
+
+// 기본 보더 컬러
+$bd : #dddddd;
+// 기본 행간 값
+$lh : 1.3;
+// 기본 자간 값
+$ls : -0.02em;
+
+// 색상
+$--primary : #009CDC; // 주제색(Primary Color)
+$--accent : #6BC800; // 강조색(Accent(Brand) Color)
+$--accent-depp : #5CA10E; // 강조색(Accent(Brand) Color)
+$--sub : #FF7700; // 보조색(Sub Color)
+$--base : #989898; // 배경색(BG Color)
+$--dark : #000000; // 바탕색 검정
+$--light : #ffffff; // 바탕색 흰색
+
+// 콘텐츠 영역 기본
+$inner_padding : 2rem;
+$inner_width : calc(162rem + ($inner_padding * 2) );
+
+// 섹션 정의
+@mixin inner {
+    width: 100%;
+    height: 100%;
+    max-width: $inner_width;
+    padding:$inner_padding;
+    margin: 0 auto;
+}
+
+// 플렉스
+@mixin flex($x: center, $y: center, $d: row, $w: nowrap) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    flex-direction: $d;
+    flex-wrap: $w;
+}
+
+// 아이콘 - 폰트어썸 가상선택자 
+@mixin icon($unicode, $style, $color) {
+    display: inline-block;
+    font-family: 'Font Awesome 6 Pro';
+    content: $unicode;
+    font-weight: $style;
+    color: $color;
+}
+
+// 말줄임
+@mixin ellipsis1 {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin ellipsis2 {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin ellipsis3 {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// 포지션 센터
+@mixin place_center($poy:absolute) {
+    position: $poy;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin place_top($poy:absolute) {
+    position: $poy;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin place_left($poy:absolute) {
+    position: $poy;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// 백그라운드 이미지
+@mixin bg_image($url) {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url($url);
+}
+
+// 백그라운드 이미지
+@mixin shadow($url) {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url($url);
+}
+
+
+// 반응형
+@mixin desktop {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
